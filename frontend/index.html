@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gerenciador de produtos</h1>
+
+    <div class="container">
+        <h2>Cadastrar Nova produto</h2>
+        <form id="form-adicionar">
+            <input type="text" id="nome-add" placeholder="Nome" required>
+            <input type="number" id="preco-add" placeholder="preco" required>
+            <input type="text" id="cpreco-add" placeholder="Cpreco" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Lista de produtos</h2>
+        <table id="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>preco</th>
+                    <th>Cpreco</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas da tabela serão inseridas aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para Edição -->
+    <div id="modal-editar" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Editar produto</h2>
+            <form id="form-editar">
+                <input type="hidden" id="id-edit">
+                <label for="nome-edit">Nome:</label>
+                <input type="text" id="nome-edit" required>
+                <label for="preco-edit">preco:</label>
+                <input type="number" id="preco-edit" required>
+                <label for="cpreco-edit">Cpreco:</label>
+                <input type="text" id="cpreco-edit" required>
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
