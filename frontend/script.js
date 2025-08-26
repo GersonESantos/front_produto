@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://api-produto-41km.onrender.com/produtoMongo'; // A API será servida no mesmo host
+    const apiUrl = 'http://localhost:8080/produtoMongo'; // A API será servida no mesmo host
  
     const formAdicionar = document.getElementById('form-adicionar');
     const tabelaprodutosBody = document.querySelector('#tabela-produtos tbody');
