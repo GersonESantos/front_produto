@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         produtos.forEach(produto => {
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${produto._id}</td>
+                <td>${_id}</td>
                 <td>${produto.nome}</td>
                 <td>${produto.preco}</td>
                 <td>${produto.cpreco}</td>
                 <td class="action-buttons">
-                    <button class="edit-btn" data-id="${produto._id}">Editar</button>
-                    <button class="delete-btn" data-id="${produto._id}">Excluir</button>
+                    <button class="edit-btn" data-id="${_id}">Editar</button>
+                    <button class="delete-btn" data-id="${_id}">Excluir</button>
                 </td>
             `;
             tabelaprodutosBody.appendChild(tr);
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const produto = await response.json();
                 
                 // Preenche o modal com os dados da produto
-                idEditInput.value = produto._id;
+                idEditInput.value = _id;
                 nomeEditInput.value = produto.nome;
                 precoEditInput.value = produto.preco;
                 cprecoEditInput.value = produto.cpreco;
